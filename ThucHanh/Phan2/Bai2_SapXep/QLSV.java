@@ -29,7 +29,7 @@ public class QLSV {
 //    }
     public void inDS(){
         for (SinhVien sv : dssv) {
-            System.out.println("Tên: " + sv.getHoTen() + ", Điểm TB: " + sv.getDiemTB());
+            System.out.println("Ten: " + sv.getHoTen() + ", Diem TB: " + sv.getDiemTB());
         }
     }
 }
