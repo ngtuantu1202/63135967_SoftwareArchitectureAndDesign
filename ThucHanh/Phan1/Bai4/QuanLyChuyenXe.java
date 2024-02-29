@@ -16,13 +16,13 @@ public class QuanLyChuyenXe {
             System.out.println(c.toString());
     }
     public float doanhThuXeNoiThanh(){
-        float doanhThu = 0;
+        float doanhThu1 = 0;
         for (ChuyenXe c : list) {
             if (c instanceof ChuyenXeNoiThanh) {
-                doanhThu += c.getDoanhThu();
+                doanhThu1 += c.getDoanhThu();
             }
         }
-        return doanhThu;
+        return doanhThu1;
     }
     public float doanhThuXeNgoaiThanh(){
         float doanhThu2 = 0;
@@ -32,6 +32,14 @@ public class QuanLyChuyenXe {
             }
         }
         return doanhThu2;
+    }
+
+    public float tongDoanhThu() {
+        float tongDoanhThu = 0;
+        for (ChuyenXe c : list) {
+            tongDoanhThu += c.getDoanhThu();
+        }
+        return tongDoanhThu;
     }
 
 }
