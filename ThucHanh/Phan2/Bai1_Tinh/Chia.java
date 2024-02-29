@@ -2,10 +2,10 @@ package ThucHanh.Phan2.Bai1_Tinh;
 
 public class Chia implements Tinh{
     @Override
-    public Tinh tinh(float a, float b) {
+    public float tinh(float a, float b) {
         if (b == 0) {
-            return float.POSITIVE_INFINITY;
+            throw new IllegalArgumentException("Cannot divide by zero");
         }
-        return a/b;
+        return a / b;
     }
 }
