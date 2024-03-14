@@ -30,13 +30,7 @@ public class Book63 {
         private int soTrang;
         private List<Book63> dsChuong = new ArrayList<>();
     }
-        public Book63.Builder tacGia(String ten){
-            return
-        }
 
 
 
-    public Book63 build(){
-        return new Book63(this);
-    }
 }
