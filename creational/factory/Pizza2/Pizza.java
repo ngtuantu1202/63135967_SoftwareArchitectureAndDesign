@@ -1,6 +1,6 @@
-package creational.factory;
+package creational.factory.Pizza2;
 
-public abstract class Pizza63 {
+public abstract class Pizza {
     StringBuilder builder = new StringBuilder();
     abstract void prepare();
     abstract void bake();

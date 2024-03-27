@@ -10,6 +10,7 @@ public class MainF88 {
         NhanVienF88 chuTich = new NhanVien("Nguyễn Tuấn Tú", "Chủ tịch", 100_000_000);
 
         bv.capCaoHon(tapVu).capCaoHon(thuKy).capCaoHon(truongPhong).capCaoHon(giamDoc).capCaoHon(chuTich);
+
         System.out.println(bv.xuLyKhoangVay(25_000_000));
         System.out.println(bv.xuLyKhoangVay(1_000_000));
         System.out.println(bv.xuLyKhoangVay(4_000_000));

@@ -1,4 +1,4 @@
-package creational.factory;
+package creational.factory.viduPizza;
 
 public abstract class PizzaStore {
     abstract Pizza63 createPizza(PizzaType p);
