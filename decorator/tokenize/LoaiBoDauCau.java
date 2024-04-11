@@ -11,9 +11,8 @@ public class LoaiBoDauCau extends TokenizeDecorator{
     @Override
     public List<String> tokenize() {
         List<String> list = token.tokenize();
-        list = list.stream()
-                .map(word -> word.replaceAll("\\p{Punct}+$", ""))
-                .collect(Collectors.toList());
+        for(String s:list)
+            s.replaceAll("\\p{Punct}+$", "");
         return list;
     }
 }
