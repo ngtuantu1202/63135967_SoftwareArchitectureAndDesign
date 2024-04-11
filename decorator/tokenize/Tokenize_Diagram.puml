@@ -4,23 +4,10 @@
 interface MyTokenizer {
     + tokenize(): List<String>
 }
-class TachTu {
-    + tokenize(): List<String>
-}
-abstract class TokenizeDecorator {
-    - tokenizer: MyTokenizer
-    + tokenize(): List<String>
-}
-class LoaiBoTuDung {
-    + tokenize(): List<String>
-}
-class LoaiBoDauCau {
-    + tokenize(): List<String>
-}
 
 MyTokenizer <|.. TachTu
 MyTokenizer <|.. TokenizeDecorator
-TokenizeDecorator o--> MyTokenizer
+TokenizeDecorator o--> MyTokenizer : token
 TokenizeDecorator <|.. LoaiBoTuDung
 TokenizeDecorator <|.. LoaiBoDauCau
 @enduml

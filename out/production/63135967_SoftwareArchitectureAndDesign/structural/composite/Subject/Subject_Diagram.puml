@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+abstract class KeHoachHocTap {
+    # String ten
+    +{abstract} void add(KeHoachHocTap k)
+    +{abstract} void remove(KeHoachHocTap k)
+    +{abstract} int getSoTC()
+    +{abstract} int getHP()
+    +{abstract} int getThongTin()
+}
+
+class MonHoc {
+    # int soTC, hp
+}
+class KeHoachChung
+KeHoachHocTap <|-- MonHoc
+KeHoachHocTap <|-- KeHoachChung
+KeHoachChung o--> KeHoachHocTap : khhts
+@enduml
