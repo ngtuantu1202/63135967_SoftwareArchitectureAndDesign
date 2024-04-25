@@ -12,9 +12,7 @@ public class MainSubject {
         keHoach.add(mh2);
         keHoach.add(mh3);
 
-        System.out.println("Thông tin khóa học:");
         System.out.println(keHoach.getThongTin());
-
         System.out.println("Tổng số tín chỉ: " + keHoach.getSoTC());
         System.out.println("Tổng học phí: " + keHoach.getHP());
     }
