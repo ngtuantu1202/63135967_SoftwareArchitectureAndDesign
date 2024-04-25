@@ -4,10 +4,12 @@ public class MenhGiaThapNhat extends ATM_TheoMenhGia{
     public MenhGiaThapNhat(int menhGia) {
         super(menhGia);
     }
-
+//    public MenhGiaThapNhat() {
+//        super(1);
+//    }
     @Override
     public ATM_TheoMenhGia menhGiaKeTiep(ATM_TheoMenhGia m) {
-        return m;
+        return null;
     }
 
     @Override
