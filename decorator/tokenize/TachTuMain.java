@@ -1,7 +1,5 @@
 package decorator.tokenize;
 
-import java.util.List;
-
 public class TachTuMain {
     public static void main(String[] args) {
         String s = "Hôm nay, trời mưa nhưng tôi vẫn phải nghỉ học!";

@@ -1,5 +1,7 @@
 package decorator.tokenize;
 
+import decorator.tokenize.MyTokenize;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

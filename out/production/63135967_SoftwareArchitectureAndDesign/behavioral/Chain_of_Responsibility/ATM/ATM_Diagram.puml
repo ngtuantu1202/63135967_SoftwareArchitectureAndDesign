@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+abstract class ATM_TheoMenhGia
+class MenhGiaThapNhat
+class MenhGia
+
+abstract class ATM_TheoMenhGia {
+    int menhGia
+    +{abstract} ATM_TheoMenhGia menhGiaKeTiep(ATM_TheoMenhGia m)
+    +{abstract} void rutTien(int soTien)
+}
+ATM_TheoMenhGia <|-- MenhGia
+ATM_TheoMenhGia <|-- MenhGiaThapNhat
+MenhGia --> ATM_TheoMenhGia:ketiep
+
+note bottom of MenhGiaThapNhat
+    Phương thức rút tiền:
+    số tờ = soTien/menhGia
+    in số tờ: menhGia
+end note
+
+note bottom of MenhGia
+    Phương thức rút tiền:
+    số dư = soTien%menhGia
+    nếu số tờ >0 --> in số tờ: menhGia
+    Nếu số dư >0:
+        Chuyển số dư cho thành phần kế tiếp
+end note
+@enduml
