@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+interface TaikhoanATM
+class Taikhoan
+class ATM
+Taikhoan..|>TaikhoanATM
+Taikhoan-->ATM:atm
+ATM-->TaikhoanATM:theATM
+class Taikhoan {
+    int soDu
+    String tenTK
+
+    duaTheVaoATM();
+    rutTheKhoiATM();
+}
+interface TaikhoanATM {
+    bool kiemTraSoDu(int soTien)
+    void nhanThongBao(int soTienRut, bool thanhCong)
+}
+class ATM {
+    nhanThe(TaikhoanATM atm)
+    traThe(TaikhoanATM atm)
+    rutTien(int soTien)
+}
+note bottom of Taikhoan
+    Observer
+end note
+note bottom of ATM
+    Subject
+end note
+
+@enduml
