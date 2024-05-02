@@ -1,0 +1,26 @@
+@startuml
+
+interface Collection63
+{
+    Iterator63 creatIterator()
+}
+interface Iterator63
+{
+    + Object first()
+    + Object next()
+    + bool isDone()
+    + Object current()
+}
+class ArrayCollection63
+{
+    - int[] arr
+    + int getItem()
+    + int count()
+}
+class ArrayIterator63{}
+Collection63 <|.. ArrayCollection63
+ArrayCollection63 <-- ArrayIterator63 : collection
+Iterator63 <|.. ArrayIterator63
+
+
+@enduml
