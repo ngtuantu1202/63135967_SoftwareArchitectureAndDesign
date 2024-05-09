@@ -1,0 +1,17 @@
+@startuml
+
+interface MyButtonListener
+{
+    + void onClick()
+}
+class MyButton
+{
+    + void click()
+}
+class Activity {
+    - int count = 0
+}
+Activity ..|> MyButtonListener
+MyButton <-- Activity
+MyButton --> Activity : activity
+@enduml
