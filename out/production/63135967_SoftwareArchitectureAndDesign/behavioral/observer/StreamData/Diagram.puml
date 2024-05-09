@@ -1,0 +1,32 @@
+@startuml
+
+class MyStream<T>
+{
+    + void addListener(MyStreamListener)
+    + void addEvent(T t)
+}
+class Client<T>
+interface MyStreamListener
+{
+    + void listen(T t)
+}
+class DataAccess
+{
+    - List<MonHoc>
+    + void them(MonHoc m)
+    + void xoa(String id)
+}
+
+MyStreamListener <|.. Client
+MyStream *--> MyStreamListener:listener
+Client --> MyStream:stream
+DataAccess --> MyStream:stream
+
+note right of MyStream
+    Subject
+end note
+note right of Client
+    Concrete Observer
+end note
+
+@enduml
