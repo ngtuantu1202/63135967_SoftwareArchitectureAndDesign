@@ -2,11 +2,11 @@ package behavioral.Iterator.Interger;
 
 public class ArrayCollection63 implements Collection63{
     private int[] arr = {1,2,3,4,5,6,7,8,9,10};
-    int getItem(int i)
+    public int getItem(int i)
     {
         return arr[i];
     }
-    int count()
+    public int count()
     {
         return arr.length;
     }

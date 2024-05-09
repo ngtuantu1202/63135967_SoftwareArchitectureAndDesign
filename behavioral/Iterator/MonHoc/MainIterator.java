@@ -8,6 +8,7 @@ import java.util.List;
 public class MainIterator {
     public static void duyetmonHoc(Iterator<MonHoc> iterator)
     {
+        //System.out.println(iterator.next().toString());
         while (iterator.hasNext())
         {
             MonHoc monHoc = iterator.next();
