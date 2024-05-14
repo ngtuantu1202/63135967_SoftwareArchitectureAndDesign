@@ -1,0 +1,26 @@
+@startuml
+
+class PlayerData
+{
+    int thoiGian, soLuotChoi, diem
+
+}
+class Dashboard
+interface PlayerDataListener
+{
+    + void listen(PlayerData data)
+}
+
+PlayerData --> PlayerDataListener
+Dashboard --> PlayerDataListener : listen
+PlayerData ..|> Dashboard : playerDât
+
+note top of PlayerData
+    Subject
+    Các setter:
+        khi cập nhật giá trị thì gọi phương thức listen của listener
+end note
+note right of Dashboard
+    Concrete Observer
+end note
+@enduml
